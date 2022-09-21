@@ -1,0 +1,3 @@
+/*
+Debe mostrar el detalle de la actividad que se seleccione de CountryDetail.
+*/

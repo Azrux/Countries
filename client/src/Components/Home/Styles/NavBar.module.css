@@ -1,0 +1,23 @@
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: aquamarine;
+}
+
+.title {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-right: auto;
+  font-family: 'Caveat', cursive;
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-size: 2.2rem;
+}
+
+.searchBar {
+  align-items: flex-end;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}

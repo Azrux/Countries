@@ -1,0 +1,116 @@
+.backgroundImg {
+  background-image: url('../../../imagenes/Background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  display: block;
+  padding-bottom: 48.5%;
+  height: 0;
+}
+
+.flagSquare {
+  width: 900px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  margin-top: 11%;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-radius: 20px;
+}
+
+.flag {
+  width: 800px;
+  height: 500px;
+  position: relative;
+  display: inline-block;
+  object-fit: cover;
+  opacity: 70%;
+  border-radius: 20px;
+  border: 5px double white;
+  margin-top: 5%;
+  margin-bottom: 0.6%;
+}
+
+.flag:hover {
+  box-shadow: 0 0 1em rgb(255, 255, 255);
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.nameContainer {
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 2px black;
+}
+
+.infoContainer {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.637);
+  color: white;
+  text-align: left;
+  text-shadow: 2px 2px 2px black;
+}
+
+.name {
+  font-size: 4rem;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-radius: 10px;
+  border: 2px solid black;
+  padding-bottom: 1rem;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-family: 'Kaushan Script', cursive;
+  color: white;
+   /* font-family: 'Kalam', cursive; */
+    /* font-family: 'Aref Ruqaa Ink', serif; */
+    /* font-family: 'Bad Script', cursive; */
+    /* font-family: 'Dancing Script', cursive; */
+    /* font-family: 'Dosis', sans-serif; */
+    /* font-family: 'Indie Flower', cursive; */
+    /* font-family: 'Nothing You Could Do', cursive; */
+    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Shadows Into Light Two', cursive; */
+}
+
+.id {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.link {
+  position: relative;
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 15px;
+  color: white;
+}
+
+.link:link {
+    text-decoration: none;
+}
+
+.link:hover {
+  box-shadow: 0 0 2rem rgb(255, 255, 255);
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.link:active {
+  background-color: rgba(0, 0, 0, 0.56);
+  text-shadow: 1px 1px 1px rgba(174, 171, 171, 0.764);
+}
