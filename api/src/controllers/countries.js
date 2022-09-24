@@ -34,9 +34,10 @@ async function getCountries (req, res) {
   }
 }
 
-function getCountryById(req, res) {
+async function getCountryById(req, res) {
   const { id } = req.params
-  return Country.findByPk( id.toUpperCase(), {where: { includes: Activity }})
+  const upperId = id.toUpperCase();
+  return  await Country.findOne({where: {id: upperId}, include: Activity })
     .then(Countries => res.send(Countries))
     .catch(error => res.send(error))
 }

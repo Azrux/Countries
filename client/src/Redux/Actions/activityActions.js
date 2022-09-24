@@ -1,15 +1,16 @@
 import axios from "axios"
-import { ACTIVITIES_URL, GET_ALL_ACTIVITIES } from "../../Constants/constants"
+import { ACTIVITIES_URL, ADD_ACTIVITY } from "../../Constants/constants"
 
-export function getActivities() {
+export function addActivities(payload) {
   return  function(dispatch){ 
-    return axios.get(ACTIVITIES_URL)
+    return axios.post(ACTIVITIES_URL, payload)
       .then(res => {
         dispatch({
-          type: GET_ALL_ACTIVITIES,
+          type: ADD_ACTIVITY,
           payload: res.data
         })
       })
       .catch(e => {console.log(e)})
   }
 }
+

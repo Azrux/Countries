@@ -1,5 +1,6 @@
 import { useState, React } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
 
 /*
 Debe contener un formulario para registrar una nueva actividad:
@@ -15,6 +16,9 @@ El form debe estar controlado con JS.
 */
 
 export default function AddActivity() {
+
+  const dispatch = useDispatch();
+
   const [input, setInput] = useState({
     name: '',
     difficulty: '',
@@ -30,8 +34,10 @@ export default function AddActivity() {
     });
   }
 
-  function handleSubmit() {
-    axios.post()
+  function handleSubmit(e) {
+    e.preventDefault();
+    dispatch(AddActivity(e))
+    setInput('')
   }
 
   return (
@@ -46,7 +52,7 @@ export default function AddActivity() {
       <input name='season' value={input.season} onChange={handleInputChange}></input>
       <label>Country:</label>
       <input name='country' value={input.country} onChange={handleInputChange}></input>
-      <button onClick={handleSubmit}>Send</button>
+      <button onClick={(e) => handleSubmit(e)}>Send</button>
     </div>
   )
 }

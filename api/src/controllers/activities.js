@@ -27,6 +27,7 @@ async function addActivity(req, res) {
   }
 }
 
+
 //Edita la activity si ya existe y la agrega a countries
 // function updateActivity(req, res, next) { 
 //   const { id } = req.params;
