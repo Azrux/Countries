@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useParams } from "react-router-dom"
 import { getCountryById, searchCountry } from "../../../Redux/Actions/countryActions";
-import ActivityCard from "../../ActivityCard/ActivityCard";
 import ActivityDetail from "../../ActivityDetail/ActivityDetail";
 import style from '../Styles/CountryDetail.module.css'
 

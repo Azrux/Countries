@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ACTIVITIES_URL, ADD_ACTIVITY } from "../../Constants/constants"
+import { ACTIVITIES_URL, ADD_ACTIVITY, SELECTED_ACTIVITY } from "../../Constants/constants"
 
 export function addActivities(payload) {
   return  function(dispatch){ 
@@ -13,4 +13,3 @@ export function addActivities(payload) {
       .catch(e => {console.log(e)})
   }
 }
-
