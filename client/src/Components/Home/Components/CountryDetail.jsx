@@ -29,8 +29,8 @@ export default function CountryDetail() {
 	const dispatch = useDispatch();
   
   useEffect(() => {
-    dispatch(getCountryById(id)); // eslint-disable-next-line
-  }, [])
+    dispatch(getCountryById(id));
+  }, [dispatch, id])
 
   return (
     <div className={style.backgroundImg}>

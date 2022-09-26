@@ -1,5 +1,5 @@
 
-export const MAIN_URL = 'http://localhost:3001/home';
+export const MAIN_URL = 'http://localhost:3001/api';
 export const COUNTRIES_URL = `${MAIN_URL}/countries`;
 export const ACTIVITIES_URL = `${MAIN_URL}/activities`;
 

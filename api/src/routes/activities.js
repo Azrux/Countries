@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { addActivity } = require('../controllers/activities');
+const { addActivity, getActivities } = require('../controllers/activities');
 
 const router = Router();
 
@@ -7,5 +7,6 @@ const router = Router();
 // Crea una actividad en la DB, relacionada con el país
 
 router.post('/', addActivity)
+router.get('/', getActivities)
 
 module.exports = router;

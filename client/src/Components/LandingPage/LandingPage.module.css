@@ -1,0 +1,84 @@
+.background {
+  background-image: url('../../imagenes/landing-countries.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  display: block;
+  padding-bottom: 45.3%;
+  width: 100%;
+  filter: blur(5px);
+  position: absolute;
+}
+
+.biggerSquare {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.637);
+}
+
+.square {
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  margin-top: 11%;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-radius: 20px;
+}
+
+.link {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  margin: 15%;
+  padding: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  
+}
+
+.link:link {
+    text-decoration: none;
+}
+
+.link:hover {
+  box-shadow: 0 0 2rem rgb(255, 255, 255);
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.link:active {
+  background-color: rgba(0, 0, 0, 0.56);
+  text-shadow: 1px 1px 1px rgba(174, 171, 171, 0.764);
+}
+
+.title {
+  margin-bottom: 0%;
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+  font-family: 'Dosis', sans-serif;
+}
+
+.title2 {
+  margin-top: 0%;
+  margin-bottom: 2%;
+  color: white;
+  font-weight: bold;
+  font-size: 5rem;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.subtitle {
+  color: white;
+  font-size: 1.2rem;
+  margin: 3%;
+  font-family: 'Dosis', sans-serif;
+}

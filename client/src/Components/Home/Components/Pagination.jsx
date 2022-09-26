@@ -4,35 +4,44 @@ import style from  '../Styles/CountryCards.module.css'
 
 export default function Pagination() {
 
-  const currentPage = useSelector(state => state.currentPage)
-  const countries = useSelector(state => state.countries);
-  //const continents = useSelector(state => state.continents)
+
+  const currentPage = useSelector(state => state.currentPage);
+  const countries = useSelector(state => state.countries)
   const dispatch = useDispatch();
 
-  function nextPage() {
-    if (countries.length <= currentPage + 10) {
-      dispatch(pagination(currentPage));
-    } else {
-      dispatch(pagination(currentPage + 10))
-    };
-  };
-  
-  function prevPage() {
-    if (currentPage < 9) {
-      dispatch(pagination(0));
-    } else {
-      dispatch(pagination( currentPage - 10));
-    }
-  };
-  
-  function firstPage() {
-    dispatch(pagination(0));
-  };
-  
-  function lastPage() {
-    dispatch(pagination(countries.length - 10));
-  };
+  const pages = [];
+    for(let i = 1; i <= Math.ceil((countries.length + 1) / 10); i++){
+      pages.push(i);
+    }   
 
+  function prevPage() {
+    if(currentPage !== 1){
+      dispatch(pagination(currentPage - 1));
+    }
+    //window.scroll({top: 0, behavior: 'smooth'});
+  }
+
+  function firstPage() {
+    if(currentPage !== 1){
+         dispatch(pagination(1));
+    }
+    //window.scroll({top: 0, behavior: 'smooth'});
+  }
+
+  function nextPage() {
+    if(currentPage !== pages.length) {
+         dispatch(pagination(currentPage + 1));
+    }
+    //window.scroll({top: 0, behavior: 'smooth'});
+  }
+
+  function lastPage() {
+    if(currentPage !== pages.length) {
+         dispatch(pagination(pages.length));
+    }
+    //window.scroll({top: 0, behavior: 'smooth'});
+  }
+  
   return(
     <div>
       <button onClick={() => firstPage()} className={style.pageButtons} > {'<<'} </button>

@@ -19,16 +19,20 @@ export default function ActivityDetail({activities}) {
        <select onChange={(e) => {onChange(e.target.value)}}>
         <option value='-'>Choose an activity!</option>
             {activities && activities.map((a) => (
-                <option value={`${a.name}`}>{a.name}</option>
+                <option value={`${a.name}`} key={`${a.id}`}>{a.name}</option>
               ))
             }
         </select>
         <div>
-          { activity ? (<>
-          <p>{activity.name}</p>
-          <p>Difficulty: {activity.difficulty}</p>
-          <p>Duration: {activity.duration}</p>
-          <p>Season: {activity.season}</p></>) : (<p>Choose an activity or add a new one!</p>)
+          { activity ? (
+          <>
+            <p>{activity.name}</p>
+            <p>Difficulty: {activity.difficulty}</p>
+            <p>Duration: {activity.duration}</p>
+            <p>Season: {activity.season}</p>
+          </>
+          ) : (
+            <p>Choose an activity or add a new one!</p>)
           }
         </div>
         <Link to="/activities">Add an activity</Link>

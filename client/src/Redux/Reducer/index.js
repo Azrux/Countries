@@ -1,4 +1,4 @@
-import { CHANGE_PAGE, GET_ALL_COUNTRIES, GET_COUNTRY_BY_ID, SEARCH_BY_CONTINENT, SEARCH_COUNTRY, SELECTED_ACTIVITY, SORT_BY_NAME, SORT_BY_POPULATION } from "../../Constants/constants.js"
+import { CHANGE_PAGE, GET_ALL_COUNTRIES, GET_COUNTRY_BY_ID, SEARCH_BY_CONTINENT, SEARCH_COUNTRY,  SORT_BY_NAME, SORT_BY_POPULATION } from "../../Constants/constants.js"
 import { orderName, orderPopulation } from "../Actions/sortActions.js"
 
 
@@ -10,8 +10,7 @@ export const initialState = {
   country: [],
   countryDetail: [],
   continents: [],
-  currentPage: 0,
-  activities: []
+  currentPage: 1
 }
 
 export default function reducer(state = initialState, action){
