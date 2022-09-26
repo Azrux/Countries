@@ -1,0 +1,9 @@
+.background {
+  background-image: url('../../../imagenes/Black-Country.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  position: absolute;
+}

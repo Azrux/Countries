@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getCountries } from "../../Redux/Actions/countryActions";
 import { addActivities } from "../../Redux/Actions/activityActions";
 import { useHistory } from 'react-router-dom'
+import style from './AddActivity.module.css'
 
 /*
 Debe contener un formulario para registrar una nueva actividad:
@@ -52,67 +53,70 @@ export default function AddActivity() {
   }, [dispatch])
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className={style.background}>
+      <form onSubmit={handleSubmit} className={style.backgroundSquare}>
 
-      <p>Add a new activity</p>
+        <p className={style.addAct}>Add a new activity</p>
 
-      <label>Activity name:</label>
-        <input
-          type="text" 
-          placeholder="Activity name... " 
-          name="name"
-          onChange={handleChange}
-          value={input.name} >
-        </input>
+        <label className={style.actName}>Activity name:</label>
+          <input
+            type="text" 
+            placeholder="Activity name... " 
+            name="name"
+            onChange={handleChange}
+            value={input.name} 
+            className={style.actNameInput}>
+          </input>
 
-      <p>Choose the difficulty from 1 to 5 (Being 1 the easiest and 5 the hardest):</p>
-      <select name='difficulty' onChange={handleChange} value={input.difficulty}>
+        <div className={style.choose}>Choose the difficulty from 1 to 5<p className={style.anotherChoose}>(Being 1 the easiest and 5 the hardest):</p></div> 
+        <select className={style.chooseInput} name='difficulty' onChange={handleChange} value={input.difficulty}>
+          <option value="-">-</option>
+          <option value='1'>1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+    
+        <p className={style.chooseAct}>Choose the activity duration:</p>
+        <select className={style.chooseActInput} name='duration' onChange={handleChange} value={input.duration}>
+          <option value='-'>-</option>
+          {
+            hours.map(h => {
+              return(
+                h === 1 ?
+                <option value={h} key={h}>{h} hour</option> :
+                <option value={h} key={h}>{h} hours</option>
+              )
+            })
+          }
+        </select>
+
+        <p className={style.chooseSeason}>Choose the season:</p>
+        <select className={style.chooseSeasonInput} name='season' onChange={handleChange} value={input.season}>
+          <option value="-">-</option>
+          <option value="All">All seasons</option>
+          <option value="Autumn">Autumn</option>
+          <option value="Winter">Winter</option>
+          <option value="Spring">Spring</option>
+          <option value="Summer">Summer</option>
+        </select>
+
+        <p className={style.chooseSeason}>Choose the country:</p>
+        <select className={style.chooseSeasonInput} name='country' onChange={handleChange} value={input.country}>
         <option value="-">-</option>
-        <option value='1'>1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-  
-      <p>Choose the activity duration:</p>
-      <select name='duration' onChange={handleChange} value={input.duration}>
-        <option value='-'>-</option>
-        {
-          hours.map(h => {
-            return(
-              h === 1 ?
-              <option value={h} key={h}>{h} hour</option> :
-              <option value={h} key={h}>{h} hours</option>
-            )
-          })
-        }
-      </select>
-
-      <p>Choose the season:</p>
-      <select name='season' onChange={handleChange} value={input.season}>
-        <option value="-">-</option>
-        <option value="All">All seasons</option>
-        <option value="Autumn">Autumn</option>
-        <option value="Winter">Winter</option>
-        <option value="Spring">Spring</option>
-        <option value="Summer">Summer</option>
-      </select>
-
-      <p>Choose the country:</p>
-      <select name='country' onChange={handleChange} value={input.country}>
-      <option value="-">-</option>
-        {
-          countries.map(c => {
-            return(
-              <option value={c.id} key={c.id}>{c.name}</option>
-            )
-          })
-        }
-      </select>
-      
-        <input type='submit' value='Send'/>
-    </form>
+          {
+            countries.map(c => {
+              return(
+                <option value={c.id} key={c.id}>{c.name}</option>
+              )
+            })
+          }
+        </select>
+        
+          <input className={style.submit} type='submit' value='Send'/>
+      </form>
+    </div>
   )
 
 }

@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import CountryCard from "./CountryCard";
-import style from  '../Styles/CountryCards.module.css'
+import style from  '../Styles/SearchedCountry.module.css'
 import { searchCountry } from "../../../Redux/Actions/countryActions";
 
 
@@ -13,7 +13,7 @@ export default function SearchedCountry() {
 
     return(
       <>
-      <div>
+      <div className={style.back}>
         <CountryCard 
           key={country.id}
           id={country.id}
@@ -22,7 +22,7 @@ export default function SearchedCountry() {
           continents={country.continents}
         />
       </div>
-        <button onClick={() => dispatch(searchCountry(''))} className={style.homeButton}>
+        <button onClick={() => dispatch(searchCountry(''))} className={style.homeButton} >
             Home
         </button>
       </>

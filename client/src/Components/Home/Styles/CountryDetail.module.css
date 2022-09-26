@@ -5,7 +5,7 @@
   background-attachment: fixed;
   object-fit: cover;
   display: block;
-  padding-bottom: 48.5%;
+  padding-bottom: 45.75%;
   height: 0;
 }
 
@@ -27,13 +27,13 @@
   position: relative;
   display: inline-block;
   object-fit: cover;
-  top: 50%;
+  top: 52%;
   left: 4%;
   opacity: 70%;
   border-radius: 20px;
   border: 5px double white;
   margin-top: 5%;
-  margin-bottom: 0.6%;
+  margin-bottom: 2%;
 }
 
 .flag:hover {
@@ -72,15 +72,15 @@
 }
 
 .activitiesContainer {
-  margin-left: 10rem;
+  margin-left: 5rem;
 }
 
 .name {
-  font-size: 4rem;
+  font-size: 3.5rem;
   background-color: rgba(0, 0, 0, 0.637);
   border-radius: 10px;
   border: 2px solid black;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
   padding-left: 10px;
   padding-right: 20px;
   font-family: 'Kaushan Script', cursive;
@@ -105,7 +105,8 @@
 
 .link {
   position: relative;
-  align-items: center;
+  display: inline-flex;
+  right: 30%;
   padding: 2px;
   padding-left: 4px;
   padding-right: 4px;
@@ -134,10 +135,11 @@
   text-align: center;
   font-weight: bold;
   text-shadow: 2px 2px 2px black;
-  margin-left: 10rem;
-  margin-right: 2rem;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  margin: 0px;
+  margin-top: 18%;
 }
 
 .activitiesDetail {
-  margin-left: 10rem;
 }

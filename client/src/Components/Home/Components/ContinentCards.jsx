@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import CountryCard from "./CountryCard"
-import style from  '../Styles/CountryCards.module.css'
+import style from  '../Styles/CountryCard.module.css'
 import Pagination from "./Pagination";
 
 export default function ContinentCards() {

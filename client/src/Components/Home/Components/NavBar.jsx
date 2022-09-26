@@ -15,7 +15,7 @@ export default function NavBar() {
 
   return (<div className={style.navBar}>
     <img src={logo} alt='' className={style.logo}/>
-    <h1 className={style.title}>Where can I fly today?</h1>
+    <h1 className={style.title}>Countries!</h1>
     <SearchBar className={style.searchBar}></SearchBar>
   </div>)
 }

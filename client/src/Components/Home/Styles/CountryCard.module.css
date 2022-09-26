@@ -1,12 +1,18 @@
 .countryCards {
-    display: inline-block;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+  margin: 1%;
+  padding: 0px;
+  display: inline-block;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.289);
   }
   
+.countryCards:hover {
+  cursor: pointer;
+}
+
   .link {
-    color: black;
+    width: 100%;
+    text-decoration: none;  
   }
 
   .link:link {
@@ -14,56 +20,61 @@
   }
 
   .card {
-    margin: 1rem;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
+    transition: transform 100ms ease-in 0s;
+    padding-bottom: 2%;
   }
   
   .cardImage {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+    width: 99%;
+    height: 160px;
     object-fit: cover;
-    border: 2px solid black;
-    border-radius: 20px;
-    background-color: rgba(255, 255, 255, 0) ;
-    padding: 0px;
-    width: 20rem;
-    height: 12rem;
   }
   
   .cardImage:hover {
     cursor: pointer;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.55);
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.55);
     -webkit-transition: box-shadow 0.5s ease-in-out;
     transition: box-shadow 0.5s ease-in-out;
   }
   
   .cardDetail {
-    margin-top: 5px;
-    padding: 0px;
-    border: 2px solid rgb(0, 0, 0);
-    border-radius: 20px;
+    background-color: black;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
     font-size: 1.2rem;
-    font-family: 'Kalam', cursive;
-    background: linear-gradient(to right, #c1c1c3, #ffffff, #242424);
-    background-color: rgb(207, 207, 207);
+    font-weight: 300;
+    padding: 7px;
+    color: white;
+    object-fit: cover;
   }
   
   .cardDetail:hover {
     cursor: pointer;
-    box-shadow: 0 0 1em rgba(0, 0, 0, 0.55);
+    color: black;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.55);
     border: 0px;
     padding: 2px;
-    background: linear-gradient(to left, #1a2a6c, #b21f1f, #fdbb2d);
+    background: linear-gradient(to left, #63c1fb, #ffffff, #63c1fb);
     -webkit-transition: box-shadow 0.5s ease-in-out;
     transition: box-shadow 0.5s ease-in-out;
-    transform: scale(1.1,1.1);
-    -webkit-transform:scale(1.1,1.1);
-    -moz-transform:scale(1.1,1.1);
+    transform: scale(1,1);
+    -webkit-transform:scale(1,1);
+    -moz-transform:scale(1,1);
     transition: transform 0.7s ease-in-out;
   }
   
   .cardName {
-    margin: 0.2rem;
+    align-items: flex-start;
     font-weight: bold;
+    font-family: 'Dosis', sans-serif;
+    font-size: 1.5rem;
     /* font-family: 'Kalam', cursive; */
     /* font-family: 'Aref Ruqaa Ink', serif; */
     /* font-family: 'Bad Script', cursive; */
@@ -77,5 +88,5 @@
   }
   
   .cardContinent {
-    margin: 0.2rem;
+    font-family: 'Poppins', sans-serif;
   }

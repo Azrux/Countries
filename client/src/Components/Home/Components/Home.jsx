@@ -4,6 +4,7 @@ import { getCountries } from '../../../Redux/Actions/countryActions'
 import { useDispatch } from "react-redux";
 import SortBy from './SortBy.jsx';
 import AlltypeCards from './AlltypeCards.jsx';
+import style from '../Styles/Home.module.css'
 
 
 export default function Home() {
@@ -16,7 +17,7 @@ export default function Home() {
 
 
   return (
-    <div>
+    <div className={style.background}>
         <NavBar />
       <div>
           <SortBy />

@@ -1,0 +1,165 @@
+.background {
+  background-image: url('../../imagenes/Another\ background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  display: block;
+  padding-bottom: 45.3%;
+  width: 100%;
+  position: absolute;
+  padding-bottom: 46.5%;
+}
+
+.backgroundSquare {
+  width: 500px;
+  height: 500px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  margin-top: 11%;
+  background-color: rgba(0, 0, 0, 0.787);
+  border-radius: 20px;
+  border: 5px double white;
+  color: white;
+  display: grid;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.addAct {
+  margin-top: 0%;
+  margin-bottom: 3%;
+  margin-left: 5%;
+  font-weight: bold;
+  font-size: 2rem;
+  font-family: 'Kaushan Script', cursive;
+}
+
+.actName {
+  font-size: 1.2rem;
+  font-family: 'Dosis', sans-serif;
+  margin-right: 1%;
+  margin-left: 1%;
+  text-align: start;
+}
+
+.actNameInput {
+  float: left;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.choose {
+  font-size: 1.2rem;
+  font-family: 'Dosis', sans-serif;
+  float: inline-start;
+  margin-right: 1%;
+  margin-left: 1%;
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.anotherChoose {
+  font-size: 0.8rem;
+  font-family: 'Dosis', sans-serif;
+  float: inline-start;
+  margin-right: 1%;
+  margin-left: 1%;
+  text-align: start;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.chooseInput {
+  display: inline;
+  float: left;
+  border-radius: 5px;
+  width: 300px;
+}
+
+.chooseAct {
+  font-size: 1.2rem;
+  font-family: 'Dosis', sans-serif;
+  float: inline-start;
+  margin-right: 1%;
+  margin-left: 1%;
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.chooseActInput {
+  display: inline;
+  float: left;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.chooseSeason {
+  font-size: 1.2rem;
+  font-family: 'Dosis', sans-serif;
+  float: inline-start;
+  margin-right: 1%;
+  margin-left: 1%;
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.chooseSeasonInput {
+  display: inline;
+  float: left;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.chooseCountry {
+  font-size: 1.2rem;
+  font-family: 'Dosis', sans-serif;
+  float: inline-start;
+  margin-right: 1%;
+  margin-left: 1%;
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.chooseCountryInput {
+  display: inline;
+  float: left;
+  border-radius: 5px;
+  width: 300px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.submit {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.671);
+}
+
+.submit:hover {
+  cursor: pointer;
+  box-shadow: 0 0 2rem rgb(255, 255, 255);
+  -webkit-transition: box-shadow 0.5s ease-in-out;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.submit:active {
+  background-color: rgba(0, 0, 0, 0.56);
+  text-shadow: 1px 1px 1px rgba(174, 171, 171, 0.764);
+}

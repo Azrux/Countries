@@ -1,0 +1,46 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: rgba(0, 0, 0, 0.33);
+  border-bottom: 2px solid rgba(203, 199, 199, 0.346);
+  padding: auto;
+}
+
+.sortBy {
+  color: white;
+  margin: 0px;
+  padding-bottom: 2px;
+  margin-right: 5px;
+}
+
+.searchBy {
+  color: white;
+  margin: 0px;
+  margin-left: 2%;
+  text-align: center;
+  padding-bottom: 2px;
+  margin-right: 5px;
+}
+
+.option {
+  background-color: rgba(47, 44, 44, 0.587);
+  width: 2rem;
+  height: 1.5rem;
+  color: white;
+  border: 2px;
+  text-align: center;
+}
+
+.select {
+  background-color: rgba(47, 44, 44, 0.587);
+  width: 5rem;
+  height: 1.5rem;
+  color: white;
+  border: 2px;
+  text-align: center;
+}
+
+.select:hover {
+  cursor: pointer;
+}

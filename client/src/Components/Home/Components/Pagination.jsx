@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { pagination } from "../../../Redux/Actions/countryActions";
-import style from  '../Styles/CountryCards.module.css'
+import style from  '../Styles/Pagination.module.css'
 
 export default function Pagination() {
 
@@ -44,10 +44,25 @@ export default function Pagination() {
   
   return(
     <div>
-      <button onClick={() => firstPage()} className={style.pageButtons} > {'<<'} </button>
-      <button onClick={() => prevPage()} className={style.pageButtons} > {'<'} </button>
-      <button onClick={() => nextPage()} className={style.pageButtons} >  {'>'}   </button>
-      <button onClick={() => lastPage()} className={style.pageButtons} >  {'>>'} </button>
+      <button onClick={() => firstPage()} 
+        disabled={currentPage === 1 ? true : false} 
+        className={currentPage === 1 ? style.inactiveButton : style.activeButton}> {'<<'} 
+      </button>
+
+      <button onClick={() => prevPage()} 
+        disabled={currentPage === 1 ? true : false} 
+        className={currentPage === 1 ? style.inactiveButton : style.activeButton}> {'<'} 
+      </button>
+
+      <button onClick={() => nextPage()} 
+        disabled={currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 
+        className={ currentPage === (Math.ceil(countries.length/10))+1 ? style.inactiveButton : style.activeButton}> {'>'} 
+      </button>
+
+      <button onClick={() => lastPage()} 
+        disabled={currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 
+        className={ currentPage === (Math.ceil(countries.length/10))+1 ? style.inactiveButton : style.activeButton}> {'>>'} 
+      </button>
     </div>
   )
 }
