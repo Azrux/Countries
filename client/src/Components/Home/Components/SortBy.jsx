@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { searchByContinent, sortByName, sortByPopulation } from "../../../Redux/Actions/sortActions.js";
 import { getCountries } from '../../../Redux/Actions/countryActions.js'
 import style from '../Styles/SortBy.module.css'
@@ -16,17 +16,22 @@ Debe tene run filtro por continente.
 export default function SortBy() {
 
   const [order, setOrder] = useState("");
-  const [continent, setContinent] = useState("");
+  //const [continent, setContinent] = useState("");
+  const continent = useSelector(state => state.continent)
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (continent === 'all') {
-      setContinent('')
-    } else {
-      dispatch(searchByContinent(continent))
-    }
+  // useEffect(() => {
+  //   if (continent === 'all') {
+  //     setContinent('')
+  //   } else {
+  //     dispatch(searchByContinent(continent))
+  //   }
     
-  }, [continent, dispatch]);
+  // }, [continent, dispatch]);
+
+  function onChange(e) {
+    dispatch(searchByContinent(e.target.value))
+  }
 
     useEffect(() => {
       if (order === '-') dispatch(getCountries());
@@ -46,7 +51,7 @@ export default function SortBy() {
         </select>
 
       <p className={style.searchBy}>Search by continent: </p>
-        <select onChange={(e) => setContinent(e.target.value)} className={style.select}>
+        <select onChange={onChange} name='continent' className={style.select} >
             <option className={style.option} value="all">All</option>
             <option className={style.option} value="North America">North America</option>
             <option className={style.option} value="South America">South America</option>
