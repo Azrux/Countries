@@ -1,9 +1,25 @@
 .background {
-  background-image: url('../../../imagenes/Black-Country.jpg');
+  background-image: url('../../../imagenes/background\ dots.jpg');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   object-fit: cover;
   display: block;
-  width: 100%;
   position: absolute;
+  padding-bottom: 105%;
+  width: 100%;
+  filter: blur(1px);
+}
+
+.backgroundOne {
+  background-image: url('../../../imagenes/background\ dots.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  object-fit: cover;
+  display: block;
+  position: absolute;
+  padding-bottom: 80%;
+  width: 100%;
+  filter: blur(1px);
 }

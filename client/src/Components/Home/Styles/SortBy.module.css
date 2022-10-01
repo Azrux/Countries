@@ -2,8 +2,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  background-color: rgba(0, 0, 0, 0.33);
-  border-bottom: 2px solid rgba(203, 199, 199, 0.346);
+  background-color: rgba(0, 0, 0, 0.726);
+  border-bottom: 2px solid rgb(9, 9, 9);
   padding: auto;
 }
 
