@@ -24,13 +24,13 @@ async function getCountries (req, res) {
       await Country.bulkCreate(apiCountries);
     } else if(name) {
           const namedCountry = await Country.findOne({ where: { name: {[Op.iLike]: `%${name}%` }}});
-          namedCountry ? res.send(namedCountry) : res.status(404).send("Country can't be found");
+          namedCountry ? res.status(200).send(namedCountry) : res.status(404).send("Country can't be found");
         } else {
           Country.findAll()
-            .then((r) => res.send(r))
+            .then((r) => res.status(200).send(r))
     } 
   } catch (error) {
-    return res.send(error)
+    return res.status(404).send(error)
   }
 }
 
@@ -38,35 +38,11 @@ async function getCountryById(req, res) {
   const { id } = req.params
   const upperId = id.toUpperCase();
   return  await Country.findOne({where: {id: upperId}, include: Activity })
-    .then(Countries => res.send(Countries))
-    .catch(error => res.send(error))
+    .then(Countries => res.status(200).send(Countries))
+    .catch(error => res.status(404).send(error))
 }
-
-
-  
-// function updateCountry(req, res, next) {
-//   const { id } = req.params;
-//   const country = req.body;
-//   return Country.update(country, { where: { id }})
-//     .then((updatedCountry) => {
-//       res.send(updatedCountry)
-//     })
-//     .catch(error => next(error)) 
-// }
-  
-// function deleteCountry(req, res, next) { //NO
-//   const { id } = req.params;
-//   return Country.destroy({ where: { id }})
-//     .then(() => {
-//       res.sendStatus(200)
-//     })
-//     .catch(error => next(error)) 
-// }
 
 module.exports = {
   getCountries,
   getCountryById,
-  //getCountryByName,
-  // updateCountry,
-  // deleteCountry
 }

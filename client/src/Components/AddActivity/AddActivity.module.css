@@ -145,6 +145,7 @@
   position: relative;
   display: inline-block;
   justify-content: center;
+  margin-bottom: 5px;
   border: 1px solid white;
   border-radius: 15px;
   color: rgb(255, 255, 255);
@@ -162,4 +163,36 @@
 .submit:active {
   background-color: rgba(0, 0, 0, 0.56);
   text-shadow: 1px 1px 1px rgba(174, 171, 171, 0.764);
+}
+
+.error {
+  margin-top: 0px;
+  text-align: left;
+  color: red;
+  font-size: 0.7rem;
+}
+
+.homeButton {
+  background-color: rgba(0, 0, 0, 0.587);
+  width: 5rem;
+  height: 2rem;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin-bottom: 2%;
+}
+
+.homeButton:hover {
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.homeButton:active {
+  background-color: rgba(97, 234, 249, 0.761);
+  position: relative;
+  top: 2px;
+}
+
+.homeButton:link {
+  text-decoration: none;
 }

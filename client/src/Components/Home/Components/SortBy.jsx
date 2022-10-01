@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchByContinent, sortByName, sortByPopulation } from "../../../Redux/Actions/sortActions.js";
+import { getCountries } from '../../../Redux/Actions/countryActions.js'
 import style from '../Styles/SortBy.module.css'
 
 /*
@@ -28,8 +29,7 @@ export default function SortBy() {
   }, [continent, dispatch]);
 
     useEffect(() => {
-
-      if (order === '-') dispatch(searchByContinent(continent));
+      if (order === '-') dispatch(getCountries());
       if (order === "a-z" || order === "z-a") dispatch(sortByName(order));
       if (order === "population↑" || order === "population↓") dispatch(sortByPopulation(order));
     }, [continent, order, dispatch]);

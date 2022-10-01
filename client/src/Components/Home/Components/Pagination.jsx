@@ -18,30 +18,35 @@ export default function Pagination() {
     if(currentPage !== 1){
       dispatch(pagination(currentPage - 1));
     }
-    //window.scroll({top: 0, behavior: 'smooth'});
+    window.scroll({top: 0, behavior: 'smooth'});
   }
 
   function firstPage() {
     if(currentPage !== 1){
          dispatch(pagination(1));
     }
-    //window.scroll({top: 0, behavior: 'smooth'});
+    window.scroll({top: 0, behavior: 'smooth'});
   }
 
   function nextPage() {
     if(currentPage !== pages.length) {
          dispatch(pagination(currentPage + 1));
     }
-    //window.scroll({top: 0, behavior: 'smooth'});
+    window.scroll({top: 0, behavior: 'smooth'});
   }
 
   function lastPage() {
     if(currentPage !== pages.length) {
          dispatch(pagination(pages.length));
     }
-    //window.scroll({top: 0, behavior: 'smooth'});
+    window.scroll({top: 0, behavior: 'smooth'});
   }
   
+  function handlechange(e) {
+    dispatch(pagination(e.target.value));
+    window.scroll({top: 0, behavior: 'smooth'});
+  }
+
   return(
     <div>
       <button onClick={() => firstPage()} 
@@ -53,6 +58,14 @@ export default function Pagination() {
         disabled={currentPage === 1 ? true : false} 
         className={currentPage === 1 ? style.inactiveButton : style.activeButton}> {'<'} 
       </button>
+
+      <select onChange={handlechange} className={style.pageButton}>
+        {pages.map(p => {
+          return(
+            <option value={p} key={p} selected={p === currentPage ? true : false}>{p}</option>
+          )
+        })}
+      </select>
 
       <button onClick={() => nextPage()} 
         disabled={currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 

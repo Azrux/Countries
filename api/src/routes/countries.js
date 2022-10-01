@@ -12,7 +12,5 @@ const router = Router();
 
 router.get('/', getCountries);
 router.get('/:id', getCountryById);
-// router.put('/:id', updateCountry);
-// router.delete('/:id', deleteCountry);
 
 module.exports = router;

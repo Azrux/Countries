@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux"
 import CountryCard from "./CountryCard"
 import Pagination from "./Pagination";
-import style from '../Styles/AllCountries.module.css'
 
 export default function AllCountries(){
 
@@ -9,7 +8,7 @@ export default function AllCountries(){
   const countries = useSelector(state => state.countries);
 
   return(
-    <div className={style.allCountries}>
+    <div>
       {// eslint-disable-next-line
       countries.length > 0 ? countries.map((c, i) =>{
       if(currentPage === 1 & i < 9){

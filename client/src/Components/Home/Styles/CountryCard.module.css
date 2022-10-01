@@ -5,10 +5,13 @@
   width: 30%;
   background-color: rgba(0, 0, 0, 0.289);
   }
-  
-.countryCards:hover {
-  cursor: pointer;
-}
+
+  .countryCards:hover {
+    cursor: pointer;
+    box-shadow: 0 0 1em rgba(255, 255, 255, 0.55);
+    -webkit-transition: box-shadow 0.5s ease-in-out;
+    transition: box-shadow 0.5s ease-in-out;
+  }
 
   .link {
     width: 100%;
@@ -24,7 +27,6 @@
     background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
-    transition: transform 100ms ease-in 0s;
     padding-bottom: 2%;
   }
   
@@ -35,13 +37,6 @@
     width: 99%;
     height: 160px;
     object-fit: cover;
-  }
-  
-  .cardImage:hover {
-    cursor: pointer;
-    box-shadow: 0 0 1em rgba(255, 255, 255, 0.55);
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
   }
   
   .cardDetail {
@@ -62,12 +57,6 @@
     border: 0px;
     padding: 2px;
     background: linear-gradient(to left, #63c1fb, #ffffff, #63c1fb);
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
-    transform: scale(1,1);
-    -webkit-transform:scale(1,1);
-    -moz-transform:scale(1,1);
-    transition: transform 0.7s ease-in-out;
   }
   
   .cardName {
