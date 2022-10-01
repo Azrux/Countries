@@ -41,7 +41,7 @@ export default function AddActivity() {
 
     function validate(input) {
       let error = {}
-      if (!input.name || input.name === '') {error.name = "Name required"}
+      if (!input.name) {error.name = "Name required"}
       if (input.name.length < 3 ) {error.name = "The name must have at least 3 characters"}
       if (!input.difficulty || input.difficulty === '-') {error.difficulty = "Choose a difficulty"}
       if (!input.duration || input.duration === '-') {error.duration = "Choose a duration"}
@@ -70,7 +70,7 @@ export default function AddActivity() {
 
   function handleSubmit(e) {
     e.preventDefault();
-      if(error) {
+      if(error.hasOwnProperty('name' || 'difficulty' || 'duration' || 'country' || 'season')) {
         alert('Please, complete all the fields correctly')
       } else {
       dispatch(addActivities(input))

@@ -17,7 +17,7 @@ export default function SortBy() {
 
   const [order, setOrder] = useState("");
   //const [continent, setContinent] = useState("");
-  const continent = useSelector(state => state.continent)
+  const countries = useSelector(state => state.countries)
   const dispatch = useDispatch();
 
   // useEffect(() => {
@@ -30,6 +30,7 @@ export default function SortBy() {
   // }, [continent, dispatch]);
 
   function onChange(e) {
+    
     dispatch(searchByContinent(e.target.value))
   }
 
@@ -37,7 +38,7 @@ export default function SortBy() {
       if (order === '-') dispatch(getCountries());
       if (order === "a-z" || order === "z-a") dispatch(sortByName(order));
       if (order === "population↑" || order === "population↓") dispatch(sortByPopulation(order));
-    }, [continent, order, dispatch]);
+    }, [ order, dispatch]);
 
   return(
     <div className={style.container}>
