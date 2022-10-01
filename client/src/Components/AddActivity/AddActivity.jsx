@@ -41,16 +41,16 @@ export default function AddActivity() {
 
     function validate(input) {
       let error = {}
-      if (!input.name) {error.name = "Name required"}
-      if (input.name.length < 3 ) {error.name = "The name must have at least 3 characters"}
-      if (!input.difficulty || input.difficulty === '-') {error.difficulty = "Choose a difficulty"}
-      if (!input.duration || input.duration === '-') {error.duration = "Choose a duration"}
-      if (!input.season || input.season === '-') {error.season = "Choose a season"}
-      if (!input.country || input.country === '-') {error.country = "Choose a country"}
+      if (!input.name) { error.name = "Name required"}
+      if (input.name.length < 3 ) { error.name = "The name must have at least 3 characters"}
+      if (!input.difficulty || input.difficulty === '-') { error.difficulty = "Choose a difficulty"}
+      if (!input.duration || input.duration === '-') { error.duration = "Choose a duration"}
+      if (!input.season || input.season === '-') { error.season = "Choose a season"}
+      if (!input.country || input.country === '-') { error.country = "Choose a country"}
       if (input.name) {
         for(let i in input.name) {
           if(input.name.charCodeAt(i) < 65 || input.name.charCodeAt(i) > 122) {
-            error.name = "The name must only contain alphabetic characters"
+             error.name = "The name must only contain alphabetic characters"
           }
         }
       }
@@ -70,7 +70,7 @@ export default function AddActivity() {
 
   function handleSubmit(e) {
     e.preventDefault();
-      if(error.hasOwnProperty('name' || 'difficulty' || 'duration' || 'country' || 'season')) {
+      if(error.hasOwnProperty('name') || error.hasOwnProperty('duration') || error.hasOwnProperty('difficulty') || error.hasOwnProperty('seaosn') || error.hasOwnProperty('country')) {
         alert('Please, complete all the fields correctly')
       } else {
       dispatch(addActivities(input))

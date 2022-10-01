@@ -4,6 +4,7 @@ import style from  '../Styles/SearchedCountry.module.css'
 import { searchCountry } from "../../../Redux/Actions/countryActions";
 
 
+
 export default function SearchedCountry() {
 
   const country = useSelector(state => state.country);

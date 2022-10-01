@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { searchByContinent, sortByName, sortByPopulation } from "../../../Redux/Actions/sortActions.js";
-import { getCountries } from '../../../Redux/Actions/countryActions.js'
+import { getCountries, pagination } from '../../../Redux/Actions/countryActions.js'
 import style from '../Styles/SortBy.module.css'
 
 /*
@@ -16,21 +16,10 @@ Debe tene run filtro por continente.
 export default function SortBy() {
 
   const [order, setOrder] = useState("");
-  //const [continent, setContinent] = useState("");
-  //const countries = useSelector(state => state.countries)
   const dispatch = useDispatch();
 
-  // useEffect(() => {
-  //   if (continent === 'all') {
-  //     setContinent('')
-  //   } else {
-  //     dispatch(searchByContinent(continent))
-  //   }
-    
-  // }, [continent, dispatch]);
-
   function onChange(e) {
-    
+    dispatch(pagination(1))
     dispatch(searchByContinent(e.target.value))
   }
 
