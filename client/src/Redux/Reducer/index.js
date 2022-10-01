@@ -72,7 +72,7 @@ export default function reducer(state = initialState, action){
       })
       return {
         ...state,
-        countries: filteredContinents
+        continents: filteredContinents
       }
     case CHANGE_PAGE : {
       return {

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useParams } from "react-router-dom"
 import { getCountryById, searchCountry } from "../../../Redux/Actions/countryActions";
+import { searchByContinent } from "../../../Redux/Actions/sortActions";
 import ActivityDetail from "../../ActivityDetail/ActivityDetail";
 import style from '../Styles/CountryDetail.module.css'
 
@@ -56,7 +57,7 @@ export default function CountryDetail() {
          </div>
 
     </div>
-      <Link to='/home' className={style.link} onClick={() => dispatch(searchCountry(''))}>
+      <Link to='/home' className={style.link} onClick={() => dispatch(searchByContinent(''))}>
         Back to Home
       </Link>
 
