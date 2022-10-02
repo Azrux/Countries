@@ -70,7 +70,10 @@ export default function AddActivity() {
 
   function handleSubmit(e) {
     e.preventDefault();
-      if(error.hasOwnProperty('name') || error.hasOwnProperty('duration') || error.hasOwnProperty('difficulty') || error.hasOwnProperty('seaosn') || error.hasOwnProperty('country')) {
+      if(!input.name || !input.season || !input.duration || !input.difficulty) {
+        alert('Please, complete all the fields correctly')
+      }
+      if(error.hasOwnProperty('name') || error.hasOwnProperty('duration') || error.hasOwnProperty('difficulty') || error.hasOwnProperty('season') || error.hasOwnProperty('country')) {
         alert('Please, complete all the fields correctly')
       } else {
       dispatch(addActivities(input))
