@@ -2,7 +2,7 @@ import axios from 'axios';
 import { COUNTRIES_URL, GET_COUNTRY_BY_ID, SEARCH_COUNTRY, GET_ALL_COUNTRIES, CHANGE_PAGE } from '../../Constants/constants.js';
 
 export function getCountries() {
-  return  function(dispatch){ 
+  return function(dispatch){ 
     return axios.get(COUNTRIES_URL)
       .then(res => {
         dispatch({
@@ -10,7 +10,7 @@ export function getCountries() {
           payload: res.data
         })
       })
-      .catch(e => {console.log(e)})
+      .catch(e => {alert(e.response.data)})
   }
 }
 
@@ -23,7 +23,7 @@ export function getCountryById(id) {
         payload: res.data
       })
     })
-    .catch(e => {console.log(e)})
+    .catch(e => {alert(e.response.data)})
   }
 }
 
@@ -36,7 +36,7 @@ export function searchCountry(name) {
         payload: res.data
       })
     })
-    .catch(e => {console.log(e)})
+    .catch(e => {alert(e.response.data)})
   }
 }
 

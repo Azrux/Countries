@@ -3,8 +3,9 @@ const axios = require('axios');
 const { Op } = require("sequelize");
 
 async function getCountries (req, res) {
-  const dbCountries = await Country.count()
+
   const { name } = req.query;
+  const dbCountries = await Country.count()
 
   try {
   if(!dbCountries) {
@@ -37,9 +38,11 @@ async function getCountries (req, res) {
 async function getCountryById(req, res) {
   const { id } = req.params
   const upperId = id.toUpperCase();
-  return  await Country.findOne({where: {id: upperId}, include: Activity })
-    .then(Countries => res.status(200).send(Countries))
-    .catch(error => res.status(404).send(error))
+  const findCountry = await Country.findOne({where: {id: upperId}, include: Activity })
+  findCountry ? res.status(200).send(findCountry) : res.status(404).send("Country can't be found");
+  // return await Country.findOne({where: {id: upperId}, include: Activity })
+  //   .then(Countries => res.status(200).send(Countries))
+  //   .catch(error => res.status(404).send(error))
 }
 
 module.exports = {

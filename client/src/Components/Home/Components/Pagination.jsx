@@ -15,30 +15,22 @@ export default function Pagination() {
     }   
 
   function prevPage() {
-    if(currentPage !== 1){
-      dispatch(pagination(currentPage - 1));
-    }
+    dispatch(pagination(currentPage - 1));
     window.scroll({top: 0, behavior: 'smooth'});
   }
 
   function firstPage() {
-    if(currentPage !== 1){
-         dispatch(pagination(1));
-    }
+    dispatch(pagination(1));
     window.scroll({top: 0, behavior: 'smooth'});
   }
 
   function nextPage() {
-    if(currentPage !== pages.length) {
-         dispatch(pagination(currentPage + 1));
-    }
+    dispatch(pagination(currentPage + 1));
     window.scroll({top: 0, behavior: 'smooth'});
   }
 
   function lastPage() {
-    if(currentPage !== pages.length) {
-         dispatch(pagination(pages.length));
-    }
+    dispatch(pagination(pages.length));
     window.scroll({top: 0, behavior: 'smooth'});
   }
   
@@ -68,7 +60,7 @@ export default function Pagination() {
       </select>
 
       <button onClick={() => nextPage()} 
-        disabled={currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 
+        disabled={ currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 
         className={ currentPage === (Math.ceil(countries.length/10))+1 ? style.inactiveButton : style.activeButton}> {'>'} 
       </button>
 
