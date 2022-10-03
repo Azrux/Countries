@@ -40,9 +40,6 @@ async function getCountryById(req, res) {
   const upperId = id.toUpperCase();
   const findCountry = await Country.findOne({where: {id: upperId}, include: Activity })
   findCountry ? res.status(200).send(findCountry) : res.status(404).send("Country can't be found");
-  // return await Country.findOne({where: {id: upperId}, include: Activity })
-  //   .then(Countries => res.status(200).send(Countries))
-  //   .catch(error => res.status(404).send(error))
 }
 
 module.exports = {
