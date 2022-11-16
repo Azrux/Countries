@@ -13,3 +13,4 @@ export const SORT_BY_NAME = 'SORT_BY_NAME';
 export const SORT_BY_POPULATION = 'SORT_BY_POPULATION';
 export const CHANGE_PAGE = 'CHANGE_PAGE';
 export const SELECTED_ACTIVITY = 'SELECTED_ACTIVITY'
+export const SORT_BY_AREA = 'SORT_BY_AREA'

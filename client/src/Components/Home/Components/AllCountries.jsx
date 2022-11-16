@@ -7,6 +7,7 @@ export default function AllCountries(){
   const currentPage = useSelector(state => state.currentPage)
   const countries = useSelector(state => state.countries);
 
+
   return(
     <div>
       {// eslint-disable-next-line

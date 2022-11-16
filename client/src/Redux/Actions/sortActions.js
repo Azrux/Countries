@@ -1,4 +1,4 @@
-import { SEARCH_BY_CONTINENT, SORT_BY_NAME, SORT_BY_POPULATION } from '../../Constants/constants.js'
+import { SEARCH_BY_CONTINENT, SORT_BY_NAME, SORT_BY_POPULATION, SORT_BY_AREA } from '../../Constants/constants.js'
 
 export function sortByName(payload) {
   return {
@@ -21,6 +21,13 @@ export function searchByContinent(payload) {
   }
 }
 
+export function sortByArea(payload) {
+  return {
+    type: SORT_BY_AREA,
+    payload
+  }
+}
+
 export function orderName(a, b) {
   if(a.name < b.name) return -1
   if(b.name < a.name) return 1 
@@ -33,3 +40,8 @@ export function orderPopulation(a, b) {
   return 0
 }
 
+export function orderArea(a, b) {
+  if(a.area < b.area) return -1
+  if(b.area < a.area) return 1 
+  return 0
+}

@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a72f6c17.chunk.css",
+    "main.js": "/static/js/main.b7bb92db.chunk.js",
+    "main.js.map": "/static/js/main.b7bb92db.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.43ccd6bc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.43ccd6bc.js.map",
+    "static/js/2.1aeb7910.chunk.js": "/static/js/2.1aeb7910.chunk.js",
+    "static/js/2.1aeb7910.chunk.js.map": "/static/js/2.1aeb7910.chunk.js.map",
+    "static/js/3.706db136.chunk.js": "/static/js/3.706db136.chunk.js",
+    "static/js/3.706db136.chunk.js.map": "/static/js/3.706db136.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.a72f6c17.chunk.css.map": "/static/css/main.a72f6c17.chunk.css.map",
+    "static/js/2.1aeb7910.chunk.js.LICENSE.txt": "/static/js/2.1aeb7910.chunk.js.LICENSE.txt",
+    "static/media/AddActivity.module.css": "/static/media/Another background.62e0e86d.jpg",
+    "static/media/CountryDetail.module.css": "/static/media/Background.623fc6e8.jpg",
+    "static/media/Home.module.css": "/static/media/background dots.d12436e8.jpg",
+    "static/media/country-flags.3694fad3.png": "/static/media/country-flags.3694fad3.png",
+    "static/media/LandingPage.module.css": "/static/media/landing-countries.989e5977.jpg",
+    "static/media/searchbutton.16d927a7.jpg": "/static/media/searchbutton.16d927a7.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43ccd6bc.js",
+    "static/js/2.1aeb7910.chunk.js",
+    "static/css/main.a72f6c17.chunk.css",
+    "static/js/main.b7bb92db.chunk.js"
+  ]
+}

@@ -1,5 +1,5 @@
-import { CHANGE_PAGE, GET_ALL_COUNTRIES, GET_COUNTRY_BY_ID, SEARCH_BY_CONTINENT, SEARCH_COUNTRY,  SORT_BY_NAME, SORT_BY_POPULATION } from "../../Constants/constants.js"
-import { orderName, orderPopulation } from "../Actions/sortActions.js"
+import { CHANGE_PAGE, GET_ALL_COUNTRIES, GET_COUNTRY_BY_ID, SEARCH_BY_CONTINENT, SEARCH_COUNTRY,  SORT_BY_NAME, SORT_BY_POPULATION, SORT_BY_AREA } from "../../Constants/constants.js"
+import { orderName, orderPopulation, orderArea } from "../Actions/sortActions.js"
 
 
 
@@ -60,6 +60,21 @@ export default function reducer(state = initialState, action){
           ...state,
           countries: state.countries.slice().sort(orderPopulation).reverse(),
           continents: state.continents.slice().sort(orderPopulation).reverse()
+        }
+      }
+    }
+    case SORT_BY_AREA: {
+      if(action.payload === 'areaAsc') {
+        return {
+          ...state,
+          countries: state.countries.slice().sort(orderArea),
+          continents: state.continents.slice().sort(orderArea)
+        }
+      } else {
+        return {
+          ...state,
+          countries: state.countries.slice().sort(orderArea).reverse(),
+          continents: state.continents.slice().sort(orderArea).reverse()
         }
       }
     }

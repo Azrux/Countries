@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { searchByContinent, sortByName, sortByPopulation } from "../../../Redux/Actions/sortActions.js";
+import { searchByContinent, sortByName, sortByPopulation, sortByArea } from "../../../Redux/Actions/sortActions.js";
 import { getCountries, pagination } from '../../../Redux/Actions/countryActions.js'
 import style from '../Styles/SortBy.module.css'
 
@@ -27,6 +27,7 @@ export default function SortBy() {
       if (order === '-') dispatch(getCountries());
       if (order === "a-z" || order === "z-a") dispatch(sortByName(order));
       if (order === "population↑" || order === "population↓") dispatch(sortByPopulation(order));
+      if (order === "areaAsc" || order === "areaDesc") dispatch(sortByArea(order));
     }, [order, dispatch]);
 
   return(
@@ -38,6 +39,8 @@ export default function SortBy() {
           <option className={style.option} value="z-a" >Z-A</option>
           <option className={style.option} value="population↑" >Population ↑</option>
           <option className={style.option} value="population↓" >Population ↓</option>
+          <option className={style.option} value="areaAsc" >Area ↑</option>
+          <option className={style.option} value="areaDesc" >Area ↓</option>
         </select>
 
       <p className={style.searchBy}>Search by continent: </p>
@@ -51,6 +54,8 @@ export default function SortBy() {
             <option className={style.option} value="Oceania">Oceania</option>
             <option className={style.option} value="Antarctica">Antarctica</option>
           </select>
+
+      
     </div>
   )
 }
