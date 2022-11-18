@@ -1,9 +1,10 @@
 import axios from 'axios';
-import { COUNTRIES_URL, GET_COUNTRY_BY_ID, SEARCH_COUNTRY, GET_ALL_COUNTRIES, CHANGE_PAGE } from '../../Constants/constants.js';
+import {  GET_COUNTRY_BY_ID, SEARCH_COUNTRY, GET_ALL_COUNTRIES, CHANGE_PAGE } from '../../Constants/constants.js';
+const {REACT_APP_COUNTRIES_URL} = process.env
 
 export function getCountries() {
   return function(dispatch){ 
-    return axios.get(COUNTRIES_URL)
+    return axios.get(REACT_APP_COUNTRIES_URL)
       .then(res => {
         dispatch({
           type: GET_ALL_COUNTRIES,
@@ -16,7 +17,7 @@ export function getCountries() {
 
 export function getCountryById(id) {
   return function(dispatch) {
-    return axios.get(`${COUNTRIES_URL}/${id}`)
+    return axios.get(`${REACT_APP_COUNTRIES_URL}/${id}`)
     .then(res => {
       dispatch({
         type: GET_COUNTRY_BY_ID,
@@ -29,7 +30,7 @@ export function getCountryById(id) {
 
 export function searchCountry(name) {
   return function(dispatch) {
-    return axios.get(`${COUNTRIES_URL}?name=${name}`)
+    return axios.get(`${REACT_APP_COUNTRIES_URL}?name=${name}`)
     .then(res =>{
       dispatch({
         type: SEARCH_COUNTRY,

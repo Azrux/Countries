@@ -1,8 +1,3 @@
-
-export const MAIN_URL = 'http://localhost:3001/api';
-export const COUNTRIES_URL = `${MAIN_URL}/countries`;
-export const ACTIVITIES_URL = `${MAIN_URL}/activities`;
-
 export const GET_ALL_COUNTRIES = 'GET_ALL_COUNTRIES'
 export const GET_COUNTRY_BY_ID = 'GET_COUNTRY_BY_ID'
 export const GET_COUNTRY_DETAIL = 'GET_COUNTRY_DETAIL'
