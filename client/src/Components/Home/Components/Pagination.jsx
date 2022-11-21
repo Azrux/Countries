@@ -6,13 +6,22 @@ export default function Pagination() {
 
 
   const currentPage = useSelector(state => state.currentPage);
-  const countries = useSelector(state => state.countries)
+  const countries = useSelector(state => state.countries);
+  const continents = useSelector(state => state.continents)
   const dispatch = useDispatch();
 
   const pages = [];
-    for(let i = 1; i <= Math.ceil((countries.length + 1) / 10); i++){
+  
+  if(continents.length) { 
+    for(let i = 1; i <= Math.ceil((continents.length + 1) / 10); i++){
       pages.push(i);
-    }   
+    }  
+  } 
+  if(!continents.length && countries) { 
+    for(let i = 1; i <= Math.ceil((countries.length + 1) / 10); i++){
+        pages.push(i);
+      }     
+  }
 
   function prevPage() {
     dispatch(pagination(currentPage - 1));
@@ -30,7 +39,7 @@ export default function Pagination() {
   }
 
   function lastPage() {
-    dispatch(pagination(pages.length));
+    dispatch(pagination((pages.length + 1) / 10));
     window.scroll({top: 0, behavior: 'smooth'});
   }
   
@@ -60,13 +69,13 @@ export default function Pagination() {
       </select>
 
       <button onClick={() => nextPage()} 
-        disabled={ currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 
-        className={ currentPage === (Math.ceil(countries.length/10))+1 ? style.inactiveButton : style.activeButton}> {'>'} 
+        disabled={ currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? true : false} 
+        className={ currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? style.inactiveButton : style.activeButton}> {'>'} 
       </button>
 
       <button onClick={() => lastPage()} 
-        disabled={currentPage === (Math.ceil(countries.length/10))+1 ? true : false} 
-        className={ currentPage === (Math.ceil(countries.length/10))+1 ? style.inactiveButton : style.activeButton}> {'>>'} 
+        disabled={currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? true : false} 
+        className={ currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? style.inactiveButton : style.activeButton}> {'>>'} 
       </button>
     </div>
   )
