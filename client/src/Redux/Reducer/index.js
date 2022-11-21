@@ -1,4 +1,4 @@
-import { CHANGE_PAGE, GET_ALL_COUNTRIES, GET_COUNTRY_BY_ID, SEARCH_BY_CONTINENT, SEARCH_COUNTRY,  SORT_BY_NAME, SORT_BY_POPULATION, SORT_BY_AREA } from "../../Constants/constants.js"
+import { CHANGE_PAGE, GET_ALL_COUNTRIES, GET_COUNTRY_BY_ID, SEARCH_BY_CONTINENT, SEARCH_COUNTRY,  SORT_BY_NAME, SORT_BY_POPULATION, SORT_BY_AREA, SET_LOADING } from "../../Constants/constants.js"
 import { orderName, orderPopulation, orderArea } from "../Actions/sortActions.js"
 
 
@@ -10,7 +10,8 @@ export const initialState = {
   country: [],
   countryDetail: [],
   continents: [],
-  currentPage: 1
+  currentPage: 1,
+  loading: false
 }
 
 export default function reducer(state = initialState, action){
@@ -30,6 +31,7 @@ export default function reducer(state = initialState, action){
     case GET_COUNTRY_BY_ID: {
       return {
           ...state,
+          loading: false,
           countryDetail: action.payload
       }
     }
@@ -93,6 +95,12 @@ export default function reducer(state = initialState, action){
       return {
         ...state,
         currentPage: action.payload
+      }
+    }
+    case SET_LOADING : {
+      return {
+        ...state,
+        loading: action.payload
       }
     }
     default: {

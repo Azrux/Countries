@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {  GET_COUNTRY_BY_ID, SEARCH_COUNTRY, GET_ALL_COUNTRIES, CHANGE_PAGE } from '../../Constants/constants.js';
+import {  GET_COUNTRY_BY_ID, SEARCH_COUNTRY, GET_ALL_COUNTRIES, CHANGE_PAGE, SET_LOADING } from '../../Constants/constants.js';
 const {REACT_APP_COUNTRIES_URL} = process.env
 
 export function getCountries() {
@@ -45,5 +45,12 @@ export function pagination(payload) {
   return {
     type: CHANGE_PAGE,
     payload
+  }
+}
+
+export function isLoading(payload){
+  return {
+      type: SET_LOADING,
+      payload
   }
 }
