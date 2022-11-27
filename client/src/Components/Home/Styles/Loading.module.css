@@ -1,9 +1,3 @@
-.container {
-  background-color: rgba(0, 0, 0, 0.541);
-  width: 100%;
-  height: 100%;
-}
-
 .ldsRoller {
   display: inline-block;
   position: relative;
@@ -11,6 +5,7 @@
   height: 80px;
 }
 .ldsRoller div {
+  padding-top: 50%;
   animation: ldsRoller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   transform-origin: 40px 40px;
 }
