@@ -34,7 +34,9 @@ export default function CountryDetail() {
     dispatch(getCountryById(id));
   }, [dispatch, id])
 
-  if(countryDetail.length > 0) {
+  if(countryDetail.length === 0) {
+    return <Loading />
+  } else {
 
     return (
       <div className={style.backgroundImg}>
@@ -65,9 +67,5 @@ export default function CountryDetail() {
         </Link>
   
     </div>
-  )
-  } else {
-    <Loading />
-  }
-
+  )}
 }
