@@ -4,8 +4,6 @@ import Home from './Components/Home/Components/Home';
 import CountryDetail from './Components/Home/Components/CountryDetail';
 import AddActivity from './Components/AddActivity/AddActivity';
 import LandingPage from './Components/LandingPage/LandingPage';
-import { Loading } from './Components/Home/Components/Loading';
-
 
 
 function App() {
@@ -22,9 +20,6 @@ function App() {
       </Route>
       <Route exact path="/activities" >
         <AddActivity />
-      </Route>
-      <Route exact path="/loading" >
-        <Loading />
       </Route>
     </div>
   )
