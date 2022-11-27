@@ -69,13 +69,13 @@ export default function Pagination() {
       </select>
 
       <button onClick={() => nextPage()} 
-        disabled={ currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? true : false} 
-        className={ currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? style.inactiveButton : style.activeButton}> {'>'} 
+        disabled={ currentPage === (continents?.length > 0 ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? true : false} 
+        className={ currentPage === (continents?.length > 0 ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? style.inactiveButton : style.activeButton}> {'>'} 
       </button>
 
       <button onClick={() => lastPage()} 
-        disabled={currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? true : false} 
-        className={ currentPage === (continents ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? style.inactiveButton : style.activeButton}> {'>>'} 
+        disabled={currentPage === (continents?.length > 0 ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? true : false} 
+        className={ currentPage === (continents?.length > 0 ? (Math.ceil(continents.length/10)) : (Math.ceil(countries.length/10)))+1 ? style.inactiveButton : style.activeButton}> {'>>'} 
       </button>
     </div>
   )
