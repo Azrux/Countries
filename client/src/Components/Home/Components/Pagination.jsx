@@ -44,7 +44,7 @@ export default function Pagination() {
   }
   
   function handlechange(e) {
-    dispatch(pagination(e.target.value));
+    dispatch(pagination(parseInt(e.target.value)));
     window.scroll({top: 0, behavior: 'smooth'});
   }
 
