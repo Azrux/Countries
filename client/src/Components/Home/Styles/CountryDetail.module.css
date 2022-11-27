@@ -24,6 +24,7 @@
 .flag {
   width: 800px;
   height: 500px;
+  position: relative;
   display: inline-block;
   object-fit: cover;
   top: 52%;

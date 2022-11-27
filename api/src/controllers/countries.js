@@ -14,7 +14,7 @@ async function getCountries (req, res) {
         return {
           id: c.cca3,
           name: c.name.common,
-          flag: c.flags[0],
+          flag: c.flags[1],
           continents: c.continents.toString(),
           capital: c.capital ? c.capital.toString() : 'Unknown',
           subregion: c.subregion ? c.subregion : 'Unknown',

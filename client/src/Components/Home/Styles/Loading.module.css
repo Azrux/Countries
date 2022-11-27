@@ -1,5 +1,6 @@
 .ldsRoller {
-  padding-top: 50px;
+  padding-top: 25%;
+  background-color: rgb(70, 69, 69);
   display: inline-block;
   position: relative;
   width: 80px;
