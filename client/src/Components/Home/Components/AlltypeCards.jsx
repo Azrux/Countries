@@ -19,7 +19,9 @@ export default function AlltypeCards() {
   const country = useSelector(state => state.country); //Trae card buscada
   const continents = useSelector(state => state.continents); //Trae card filtradas por continente
 
-
+  if(countries.length === 0 && country.length === 0 && continents.length === 0) {
+    return <div>Loading...</div>
+  }
   if(country.name) {
     return <SearchedCountry />
   }
