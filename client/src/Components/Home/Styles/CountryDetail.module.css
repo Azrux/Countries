@@ -12,6 +12,7 @@
 .flagSquare {
   width: 900px;
   height: 600px;
+  transform: translate(-50%, -50%);
   position: absolute;
   top: 27%;
   left: 50%;
@@ -23,7 +24,6 @@
 .flag {
   width: 800px;
   height: 500px;
-  position: relative;
   display: inline-block;
   object-fit: cover;
   top: 52%;
