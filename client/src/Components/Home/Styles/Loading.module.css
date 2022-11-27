@@ -1,3 +1,9 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.541);
+  width: 100%;
+  height: 100%;
+}
+
 .ldsRoller {
   display: inline-block;
   position: relative;
@@ -15,7 +21,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgba(0, 0, 0, 0.144);
+  background: rgb(0, 0, 0);
   margin: -4px 0 0 -4px;
 }
 .ldsRoller div:nth-child(1) {
