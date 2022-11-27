@@ -39,7 +39,7 @@ export default function Pagination() {
   }
 
   function lastPage() {
-    dispatch(pagination((pages.length) / 10));
+    dispatch(pagination((pages.length)));
     window.scroll({top: 0, behavior: 'smooth'});
   }
   
