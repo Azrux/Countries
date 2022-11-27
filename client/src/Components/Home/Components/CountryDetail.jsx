@@ -33,34 +33,40 @@ export default function CountryDetail() {
     dispatch(getCountryById(id));
   }, [dispatch, id])
 
-  return (
-    <div className={style.backgroundImg}>
-      <div className={style.flagSquare}></div>
-        <img src={countryDetail.flag} alt='' className={style.flag} />
+  if(countryDetail.length > 0) {
 
-      <div className={style.nameContainer}>
-        <p className={style.name} >{countryDetail.name}</p>
-      </div>
-
-      <div className={style.infoContainer} >
-        <div className={style.info}>
-          <p className={style.id} >{countryDetail.id}</p>
-          <p className={style.capital} ><b>Capital:</b> {countryDetail.capital}</p>
-          <p className={style.continent} ><b>Continent:</b> {countryDetail.continents}</p>
-          <p className={style.population} ><b>Population:</b> {countryDetail.population}</p>
-          <p className={style.area} ><b>Area: </b>{countryDetail.area}km2</p>
+    return (
+      <div className={style.backgroundImg}>
+        <div className={style.flagSquare}></div>
+          <img src={countryDetail.flag} alt='' className={style.flag} />
+  
+        <div className={style.nameContainer}>
+          <p className={style.name} >{countryDetail.name}</p>
         </div>
-
-        <div className={style.activitiesContainer}>
-          <p className={style.activities} >Activities</p>
-          <ActivityDetail activities={countryDetail.activities} />
-         </div>
-
+  
+        <div className={style.infoContainer} >
+          <div className={style.info}>
+            <p className={style.id} >{countryDetail.id}</p>
+            <p className={style.capital} ><b>Capital:</b> {countryDetail.capital}</p>
+            <p className={style.continent} ><b>Continent:</b> {countryDetail.continents}</p>
+            <p className={style.population} ><b>Population:</b> {countryDetail.population}</p>
+            <p className={style.area} ><b>Area: </b>{countryDetail.area}km2</p>
+          </div>
+  
+          <div className={style.activitiesContainer}>
+            <p className={style.activities} >Activities</p>
+            <ActivityDetail activities={countryDetail.activities} />
+           </div>
+  
+      </div>
+        <Link to='/home' className={style.link} onClick={() => dispatch(searchByContinent('all'))}>
+          Back to Home
+        </Link>
+  
     </div>
-      <Link to='/home' className={style.link} onClick={() => dispatch(searchByContinent('all'))}>
-        Back to Home
-      </Link>
+  )
+  } else {
+    <div>Loading...</div>
+  }
 
-	</div>
-)
 }
