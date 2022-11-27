@@ -26,24 +26,6 @@ export function Loading() {
           fill="#000033"
         />
       </svg>
-
-      <footer>
-        <a href="https://www.linkedin.com/in/giovanni-mrqs/" target="">
-          linkedin
-        </a>
-        -
-        <a href="https://github.com/web-duke" target="">
-          github
-        </a>
-        -
-        <a href="https://dock.io?r=dukeweb:aaaat3HE" target="">
-          dock.io
-        </a>
-        <br />
-        <span>
-          buy me a coffee with bitcoin&nbsp;: 1CVRSirjLkKQdY2prdBta2udcoEYCKEwms
-        </span>
-      </footer>
     </div>
   );
 }
