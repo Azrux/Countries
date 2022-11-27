@@ -5,6 +5,7 @@ import { getCountryById } from "../../../Redux/Actions/countryActions";
 import { searchByContinent } from "../../../Redux/Actions/sortActions";
 import ActivityDetail from "../../ActivityDetail/ActivityDetail";
 import style from '../Styles/CountryDetail.module.css'
+import { Loading } from "./Loading";
 
 /*
 Debe mostrar los detalles del país al clickear uno del home.
@@ -66,7 +67,7 @@ export default function CountryDetail() {
     </div>
   )
   } else {
-    <div>Loading...</div>
+    <Loading />
   }
 
 }

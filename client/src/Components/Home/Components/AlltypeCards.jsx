@@ -2,6 +2,7 @@ import React from "react";
 import { useSelector } from 'react-redux';
 import AllCountries from "./AllCountries";
 import ContinentCards from "./ContinentCards";
+import { Loading } from "./Loading";
 import SearchedCountry from "./SearchedCountry";
 
 /*
@@ -20,7 +21,7 @@ export default function AlltypeCards() {
   const continents = useSelector(state => state.continents); //Trae card filtradas por continente
 
   if(countries.length === 0 && country.length === 0 && continents.length === 0) {
-    return <div>Loading...</div>
+    return <Loading />
   }
   if(country.name) {
     return <SearchedCountry />
