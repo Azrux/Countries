@@ -34,7 +34,7 @@ export default function CountryDetail() {
     dispatch(getCountryById(id));
   }, [dispatch, id])
 
-  if(countryDetail.length === 0) {
+  if(countryDetail.length === 0 || countryDetail.id !== id) {
     return <Loading />
   } else {
 
