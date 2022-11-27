@@ -1,19 +1,6 @@
 .container {
   background-color: black;
+  height: 100%;
   width: 100%;
-}
-
-.svg {
-  background-color: rgba(34, 31, 31, 0.815);
-  width: 100%;
-}
-
-.cal {
-  background-color: rgba(34, 31, 31, 0.815);
-}
-
-.plane {
-  background-color: rgba(34, 31, 31, 0.815);
-  align-items: center;
-  justify-content: center;
+  padding: 50%;
 }
