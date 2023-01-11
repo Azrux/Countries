@@ -1,46 +1,44 @@
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  background-color: rgba(0, 0, 0, 0.726);
-  border-bottom: 2px solid rgb(9, 9, 9);
-  padding: auto;
+    display: flex;
+    justify-content: flex-end;
+    background-color: rgb(30, 28, 28);
+    border-bottom: solid #ff507fd0;
+    color: #fff;
 }
 
-.sortBy {
-  color: white;
-  margin: 0px;
-  padding-bottom: 2px;
-  margin-right: 5px;
+.sort {
+    display: inline-flex;
+    margin-right: 5px;
 }
 
-.searchBy {
-  color: white;
-  margin: 0px;
-  margin-left: 2%;
-  text-align: center;
-  padding-bottom: 2px;
-  margin-right: 5px;
+.continent {
+    display: inline-flex;
+    margin-right: 5px;
 }
 
-.option {
-  background-color: rgba(47, 44, 44, 0.587);
+.select {
+    margin-right: 20px;
+    font-family: 'Trebuchet MS';
+}
+
+.select:hover {
+    cursor: pointer;
+}
+
+.select option {
+  background-color: rgb(30, 28, 28);
   width: 2rem;
   height: 1.5rem;
   color: white;
   border: 2px;
   text-align: center;
+  font-family: 'Trebuchet MS';
 }
 
-.select {
-  background-color: rgba(47, 44, 44, 0.587);
-  width: 5rem;
-  height: 1.5rem;
-  color: white;
-  border: 2px;
-  text-align: center;
-}
-
-.select:hover {
-  cursor: pointer;
+@media screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
 }

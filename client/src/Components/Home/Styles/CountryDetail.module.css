@@ -1,144 +1,145 @@
-.backgroundImg {
-  background-image: url('../../../imagenes/Background.jpg');
+.container {
+  background-image: url("../../../imagenes/Background.jpg");
+  display: grid;
+  align-items: center;
+  justify-content: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   object-fit: cover;
-  display: block;
   min-height: 100vh;
 }
 
-.flagSquare {
-  width: 900px;
-  height: 600px;
-  transform: translate(-50%, -50%);
+.img {
   position: absolute;
-  top: 27%;
-  left: 50%;
-  margin-top: 11%;
-  background-color: rgba(0, 0, 0, 0.637);
-  border-radius: 20px;
-}
-
-.flag {
-  width: 800px;
-  height: 500px;
-  position: relative;
-  display: inline-block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 10%;
+  bottom: 0;
+  max-width: 80vw;
+  height: 78vh;
   object-fit: cover;
-  top: 52%;
-  left: 4%;
-  opacity: 70%;
+  opacity: 60%;
   border-radius: 20px;
-  border: 5px double white;
-  margin-top: 5%;
-  margin-bottom: 2%;
-}
-
-.flag:hover {
-  box-shadow: 0 0 1em rgb(255, 255, 255);
-  -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
+  border: 5px double #ffffff;
+  z-index: 0;
 }
 
 .nameContainer {
-  position: absolute;
-  top: 27%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  top: 25%;
   text-shadow: 2px 2px 2px black;
+  z-index: 1;
 }
 
-.infoContainer {
-  position: absolute;
+.name {
+  font-size: 3.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  border: 2px solid black;
+  padding-bottom: 0.5rem;
+  padding-left: 10px;
+  padding-right: 20px;
+  font-family: "Kaushan Script", cursive;
+  color: white;
+  text-align: center;
+}
+
+.dataContainer {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   padding-left: 20px;
   padding-right: 50px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.637);
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
-.info {
-  text-align: left;
-  text-shadow: 2px 2px 2px black;
+.id {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .activitiesContainer {
   margin-left: 5rem;
 }
 
-.name {
-  font-size: 3.5rem;
-  background-color: rgba(0, 0, 0, 0.637);
-  border-radius: 10px;
-  border: 2px solid black;
-  padding-bottom: 0.5rem;
-  padding-left: 10px;
-  padding-right: 20px;
-  font-family: 'Kaushan Script', cursive;
-  color: white;
-   /* font-family: 'Kalam', cursive; */
-    /* font-family: 'Aref Ruqaa Ink', serif; */
-    /* font-family: 'Bad Script', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'Dosis', sans-serif; */
-    /* font-family: 'Indie Flower', cursive; */
-    /* font-family: 'Nothing You Could Do', cursive; */
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Shadows Into Light Two', cursive; */
-}
-
-.id {
-  font-family: 'Poppins', sans-serif;
+.activities {
+  font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  text-align: center;
   font-weight: bold;
+  text-shadow: 2px 2px 2px black;
 }
 
 .link {
   position: relative;
-  display: inline-flex;
-  right: 30%;
-  padding: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
+  display: grid;
+  justify-items: center;
   border-radius: 15px;
   color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.764);
 }
 
 .link:link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .link:hover {
-  box-shadow: 0 0 2rem rgb(255, 255, 255);
-  -webkit-transition: box-shadow 0.5s ease-in-out;
-  transition: box-shadow 0.5s ease-in-out;
+  text-shadow: 5px 5px 3px rgb(0, 0, 0);
 }
 
 .link:active {
-  background-color: rgba(0, 0, 0, 0.56);
   text-shadow: 1px 1px 1px rgba(174, 171, 171, 0.764);
 }
 
-.activities {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  text-align: center;
-  font-weight: bold;
-  text-shadow: 2px 2px 2px black;
-  margin-left: 7rem;
-  margin-right: 7rem;
-  margin: 0px;
-  margin-top: 18%;
-}
+@media screen and (max-width: 800px) {
+  .container {
+    display: grid;
+  }
 
-/* .activitiesDetail {
-} */
+  .nameContainer {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    width: fit-content;
+    width: 300px;
+  }
+
+  .img {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 150px;
+    opacity: 1;
+  }
+
+  .name {
+    position: static;
+  }
+
+  .dataContainer {
+    position: static;
+    display: grid;
+    justify-items: center;
+    padding: 0;
+    padding-bottom: 10px;
+    text-align: center;
+    margin: 0;
+    margin-top: 10%;
+  }
+
+  .activitiesContainer {
+    margin: 0;
+  }
+}

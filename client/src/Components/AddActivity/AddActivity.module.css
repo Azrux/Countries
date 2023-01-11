@@ -1,24 +1,24 @@
 .background {
   background-image: url('../../imagenes/Another\ background.jpg');
+  display: grid;
+  align-items: center;
+  justify-content: center;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   object-fit: cover;
-  display: block;
-  padding-bottom: 45.3%;
-  width: 100%;
-  position: absolute;
-  padding-bottom: 46.5%;
+  min-height: 100vh;
 }
 
 .backgroundSquare {
-  width: 500px;
-  height: 500px;
-  transform: translate(-50%, -50%);
+  max-width: 500px;
+  max-height: 500px;
   position: absolute;
-  top: 27%;
-  left: 50%;
-  margin-top: 11%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 5%;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.787);
   border-radius: 20px;
   border: 5px double white;
@@ -173,26 +173,31 @@
 }
 
 .homeButton {
+  position: relative;
+  top: 45%;
   background-color: rgba(0, 0, 0, 0.587);
-  width: 5rem;
-  height: 2rem;
+  width: fit-content;
+  padding: 5px;
   color: white;
   border: 2px solid black;
   border-radius: 5px;
   margin-bottom: 2%;
+  text-align: center;
+  transition: 0.5s;
 }
 
 .homeButton:hover {
   cursor: pointer;
-  font-weight: bolder;
-}
-
-.homeButton:active {
-  background-color: rgba(97, 234, 249, 0.761);
-  position: relative;
-  top: 2px;
+  background-color: rgba(0, 0, 0);
 }
 
 .homeButton:link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 700px){
+  .homeButton{
+    position: static;
+    margin-top: 100vh;
+  }
 }

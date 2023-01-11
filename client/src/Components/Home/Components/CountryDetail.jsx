@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux"
-import { Link, useParams } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useParams } from "react-router-dom";
 import { getCountryById } from "../../../Redux/Actions/countryActions";
 import { searchByContinent } from "../../../Redux/Actions/sortActions";
 import ActivityDetail from "../../ActivityDetail/ActivityDetail";
-import style from '../Styles/CountryDetail.module.css'
+import s from "../Styles/CountryDetail.module.css";
 import { Loading } from "./Loading";
 
 /*
@@ -25,47 +25,52 @@ Debe contener:
 */
 
 export default function CountryDetail() {
-  
-  const {id} = useParams();
-  const countryDetail = useSelector(state => state.countryDetail);
-	const dispatch = useDispatch();
-  
+  const { id } = useParams();
+  const countryDetail = useSelector((state) => state.countryDetail);
+  const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getCountryById(id));
-  }, [dispatch, id])
+  }, [dispatch, id]);
 
-  if(countryDetail.length === 0 || countryDetail.id !== id) {
-    return <Loading />
+  if (countryDetail.length === 0 || countryDetail.id !== id) {
+    return <Loading />;
   } else {
-
     return (
-      <div className={style.backgroundImg}>
-        <div className={style.flagSquare}></div>
-          <img src={countryDetail.flag} alt='' className={style.flag} />
-  
-        <div className={style.nameContainer}>
-          <p className={style.name} >{countryDetail.name}</p>
+      <div className={s.container}>
+        <div className={s.nameContainer}>
+          <p className={s.name}>{countryDetail.name}</p>
         </div>
-  
-        <div className={style.infoContainer} >
-          <div className={style.info}>
-            <p className={style.id} >{countryDetail.id}</p>
-            <p className={style.capital} ><b>Capital:</b> {countryDetail.capital}</p>
-            <p className={style.continent} ><b>Continent:</b> {countryDetail.continents}</p>
-            <p className={style.population} ><b>Population:</b> {countryDetail.population}</p>
-            <p className={style.area} ><b>Area: </b>{countryDetail.area}km2</p>
+
+          <img src={countryDetail.flag} alt="" className={s.img} />
+
+        <div className={s.dataContainer}>
+          <div>
+            <p  className={s.id}>{countryDetail.id}</p>
+            <p>
+              <b>Capital:</b> {countryDetail.capital}
+            </p>
+            <p>
+              <b>Continent:</b> {countryDetail.continents}
+            </p>
+            <p>
+              <b>Population:</b> {countryDetail.population}
+            </p>
+            <p>
+              <b>Area: </b>
+              {countryDetail.area}km2
+            </p>
           </div>
-  
-          <div className={style.activitiesContainer}>
-            <p className={style.activities} >Activities</p>
+
+          <div className={s.activitiesContainer}>
+            <p className={s.activities}>Activities</p>
             <ActivityDetail activities={countryDetail.activities} />
-           </div>
-  
-      </div>
-        <Link to='/home' className={style.link} onClick={() => dispatch(searchByContinent('all'))}>
+          </div>
+        </div>
+        <Link to="/home" className={s.link} onClick={() => dispatch(searchByContinent("all"))}>
           Back to Home
         </Link>
-  
-    </div>
-  )}
+      </div>
+    );
+  }
 }

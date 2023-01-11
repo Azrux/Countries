@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux"
 import CountryCard from "./CountryCard"
-import Pagination from "./Pagination";
+import s from '../Styles/AllCountries.module.css'
 
 export default function ContinentCards() {
 
@@ -8,12 +8,12 @@ export default function ContinentCards() {
   const continents = useSelector(state => state.continents);
 
   return(
-    <div>
+    <div  className={s.container}>
       {// eslint-disable-next-line
       continents.length > 0 ? continents.map((c, i) =>{
       if(currentPage === 1 & i < 9){
         return (
-          <>
+          <div>
             <CountryCard 
               key={c.id} 
               id={c.id}
@@ -21,24 +21,23 @@ export default function ContinentCards() {
               name={c.name}
               continents={c.continents}     
             />
-          </>
+          </div>
         )
       } else if(currentPage !== 1 && i >= ( (currentPage - 1) * 10) - 1 && (i < (currentPage * 10) - 1)){
         return (
-          <>
-          <CountryCard 
-            key={c.id} 
-            id={c.id}
-            flag={c.flag}
-            name={c.name}
-            continents={c.continents}     
-          />
-        </>
+          <div>
+            <CountryCard 
+              key={c.id} 
+              id={c.id}
+              flag={c.flag}
+              name={c.name}
+              continents={c.continents}     
+            />
+        </div>
         )
         }
       }) : (<p>Please, refresh de actual page</p>)
       }
-      <Pagination />
     </div>
   )
 }

@@ -49,7 +49,7 @@ export default function Pagination() {
   }
 
   return(
-    <div>
+    <div className={style.container}>
       <button onClick={() => firstPage()} 
         disabled={currentPage === 1 ? true : false} 
         className={currentPage === 1 ? style.inactiveButton : style.activeButton}> {'<<'} 

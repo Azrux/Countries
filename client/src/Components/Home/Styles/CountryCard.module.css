@@ -1,82 +1,57 @@
-.countryCards {
-  margin: 1%;
-  padding: 0px;
-  display: inline-block;
-  width: 30%;
-  background-color: rgba(0, 0, 0, 0.289);
-  }
+.card {
+  position: relative;
+  max-width: 400px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s;
+  z-index: 1;
+  margin: 10px;
+}
 
-  .countryCards:hover {
-    cursor: pointer;
-    box-shadow: 0 0 1em rgba(255, 255, 255, 0.55);
-    -webkit-transition: box-shadow 0.5s ease-in-out;
-    transition: box-shadow 0.5s ease-in-out;
-  }
+.img {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  position: relative;
+}
 
-  .link {
-    width: 100%;
-    text-decoration: none;  
-  }
+.card:hover img {
+  filter: grayscale(0);
+}
 
-  .link:link {
-      text-decoration: none;
-  }
+.info {
+  background-color: black;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 7px;
+  color: white;
+  object-fit: cover;
+  border-radius: 5px;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
 
-  .card {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 0px;
-    padding-bottom: 2%;
-  }
-  
-  .cardImage {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    overflow: hidden;
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    position: relative;
-  }
-  
-  .cardDetail {
-    background-color: black;
-    opacity: 0.9;
-    letter-spacing: 0.5px;
-    font-size: 1.2rem;
-    font-weight: 300;
-    padding: 7px;
-    color: white;
-    object-fit: cover;
-  }
-  
-  .cardDetail:hover {
-    cursor: pointer;
-    color: black;
-    box-shadow: 0 0 1em rgba(255, 255, 255, 0.55);
-    border: 0px;
-    padding: 2px;
-    background: linear-gradient(to left, #63c1fb, #ffffff, #63c1fb);
-  }
-  
-  .cardName {
-    align-items: flex-start;
-    font-weight: bold;
-    font-family: 'Dosis', sans-serif;
-    font-size: 1.5rem;
-    /* font-family: 'Kalam', cursive; */
-    /* font-family: 'Aref Ruqaa Ink', serif; */
-    /* font-family: 'Bad Script', cursive; */
-    /* font-family: 'Dancing Script', cursive; */
-    /* font-family: 'Dosis', sans-serif; */
-    /* font-family: 'Indie Flower', cursive; */
-    /* font-family: 'Kaushan Script', cursive; */
-    /* font-family: 'Nothing You Could Do', cursive; */
-    /* font-family: 'Poppins', sans-serif; */
-    /* font-family: 'Shadows Into Light Two', cursive; */
-  }
-  
-  .cardContinent {
-    font-family: 'Poppins', sans-serif;
-  }
+.card:hover .info {
+  background-color: #ff5080;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.link {
+  width: 100%;
+  text-decoration: none;
+}
+
+.link:link {
+  text-decoration: none;
+}

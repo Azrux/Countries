@@ -1,3 +1,13 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(30, 28, 28, 0.952);
+  z-index: 2;
+}
+
 .activeButton {
   background-color: rgba(0, 0, 0, 0.587);
   width: 2rem;
@@ -12,10 +22,13 @@
   width: 2rem;
   height: 2rem;
   border: 2px;
+  background-color: rgb(24, 22, 22);
+  color: rgb(177, 177, 177);
 }
 
 .activeButton:hover {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.822);
 }
 
 .activeButton:active {
@@ -36,4 +49,5 @@
 
 .pageButton:hover {
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.822);
 }

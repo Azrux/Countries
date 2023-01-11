@@ -15,13 +15,7 @@
   text-align: center;
   text-shadow: 0 1px 0 rgb(0 0 0 / 70%);
   border-radius: 0.3em 0.3em 0.3em 0.3em;
-  background: rgba(96, 218, 242, 0.498)
-
-  /* border-radius: 0 2px 2px 0;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-  margin: 0; */
+  background: #ff507f
 }
 
 .searchButton:hover {
@@ -40,12 +34,8 @@
 }
 
 .input {
-  /* border: 1px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 0.05em rgb(0 0 0 / 40%);
-  display: inline-block;
-  font: 1rem 'Trebuchet MS',Arial,Helvetica;
-  border-radius: 0.3em 0.3em 0.3em 0.3em; */
-    width: 400px;
+    max-width: 400px;
+    min-width: 300px;
     height: 40px;
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -54,7 +44,7 @@
     flex-basis: 1e-9px;
     display: flex;
     flex-direction: row;
-    font-family: 'Shadows Into Light', cursive;
+    font-family: 'Trebuchet MS';
     font-size: 1rem;
 }
 

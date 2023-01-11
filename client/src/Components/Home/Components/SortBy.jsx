@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { searchByContinent, sortByName, sortByPopulation, sortByArea } from "../../../Redux/Actions/sortActions.js";
 import { getCountries, pagination } from '../../../Redux/Actions/countryActions.js'
-import style from '../Styles/SortBy.module.css'
+import s from '../Styles/SortBy.module.css'
 
 /*
 Deben ordenar la información en orden ascendente o descendente:
@@ -31,31 +31,34 @@ export default function SortBy() {
     }, [order, dispatch]);
 
   return(
-    <div className={style.container}>
-      <p className={style.sortBy}>Sort by: </p>
-        <select onChange={(e) => setOrder(e.target.value)} className={style.select}>
-        <option className={style.option} value="-" >-</option>
-          <option className={style.option} value="a-z" >A-Z</option>
-          <option className={style.option} value="z-a" >Z-A</option>
-          <option className={style.option} value="population↑" >Population ↑</option>
-          <option className={style.option} value="population↓" >Population ↓</option>
-          <option className={style.option} value="areaAsc" >Area ↑</option>
-          <option className={style.option} value="areaDesc" >Area ↓</option>
+    <div className={s.container} >
+      <div>
+        <p className={s.sort} >Sort by: </p>
+        <select onChange={(e) => setOrder(e.target.value) } className={s.select} >
+          <option value="-" >-</option>
+          <option value="a-z" >A-Z</option>
+          <option value="z-a" >Z-A</option>
+          <option value="population↑" >Population ↑</option>
+          <option value="population↓" >Population ↓</option>
+          <option value="areaAsc" >Area ↑</option>
+          <option value="areaDesc" >Area ↓</option>
         </select>
+      </div>
 
-      <p className={style.searchBy}>Search by continent: </p>
-        <select onChange={onChange} name='continent' className={style.select} >
-            <option className={style.option} value="all">All</option>
-            <option className={style.option} value="North America">North America</option>
-            <option className={style.option} value="South America">South America</option>
-            <option className={style.option} value="Africa">Africa</option>
-            <option className={style.option} value="Asia">Asia</option>
-            <option className={style.option} value="Europe">Europe</option>
-            <option className={style.option} value="Oceania">Oceania</option>
-            <option className={style.option} value="Antarctica">Antarctica</option>
-          </select>
+      <div>
+        <p className={s.continent} >Search by continent: </p>
+        <select onChange={onChange} name='continent' className={s.select} >
+          <option value="all">All</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+          <option value="Antarctica">Antarctica</option>
+        </select>
+      </div>
 
-      
     </div>
   )
 }

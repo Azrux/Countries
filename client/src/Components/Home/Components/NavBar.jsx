@@ -1,7 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from '../../../imagenes/country-flags.png'
 import SearchBar from "./SearchBar";
-import style from '../Styles/NavBar.module.css'
+import { searchByContinent } from "../../../Redux/Actions/sortActions";
+import { useDispatch } from "react-redux";
+import s from '../Styles/NavBar.module.css'
+import { searchCountry } from "../../../Redux/Actions/countryActions";
 
 /*
 Debe contener:
@@ -13,9 +17,14 @@ Debe contener:
 
 export default function NavBar() {
 
-  return (<div className={style.navBar}>
-    <img src={logo} alt='' className={style.logo}/>
-    <h1 className={style.title}>Countries!</h1>
-    <SearchBar className={style.searchBar}></SearchBar>
+  const dispatch = useDispatch();
+
+  return (
+  <div className={s.container}>
+    <Link to='/home' onClick={() => dispatch(searchCountry(''))} className={s.link} >
+      <img src={logo} alt='' className={s.img} />
+      <h1 className={s.title}>Countries!</h1>
+    </Link>
+    <SearchBar className={s.searchBar} />
   </div>)
 }

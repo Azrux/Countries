@@ -1,35 +1,37 @@
-.navBar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(30, 28, 28);
-  border-bottom: solid rgba(255, 255, 255, 0.33);
+.container {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    background-color: rgb(30, 28, 28);
+}
+
+.img {
+    margin: 0;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 .title {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  margin-right: auto;
-  font-family: 'Caveat', cursive;
-  /* font-family: 'Shadows Into Light', cursive; */
-  font-size: 2.2rem;
-  color: white;
-}
-
-.searchBar {
-  align-items: flex-end;
-}
-
-.logo {
-  width: 50px;
-  height: 50px;
+    font-family: 'Caveat', cursive;
+    color: #fff;
+    margin-right: auto;
 }
 
 .link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .link:link {
+    text-decoration: none;
+  }
 
-.link:link {
-  text-decoration: none;
-}
+  @media screen and (max-width: 700px) {
+    .container {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
+  }

@@ -50,7 +50,9 @@ export default function AddActivity() {
       if (input.name) {
         for(let i in input.name) {
           if(input.name.charCodeAt(i) < 65 || input.name.charCodeAt(i) > 122) {
-             error.name = "The name must only contain alphabetic characters"
+            if(input.name.charCodeAt(i) !== 32) {
+              error.name = "The name must only contain alphabetic characters"
+            }
           }
         }
       }
