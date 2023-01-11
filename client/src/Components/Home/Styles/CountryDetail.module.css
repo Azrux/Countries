@@ -21,7 +21,6 @@
   max-width: 80vw;
   height: 78vh;
   object-fit: cover;
-  opacity: 60%;
   border-radius: 20px;
   border: 5px double #ffffff;
   z-index: 1;
@@ -36,7 +35,7 @@
 
 .name {
   font-size: 3.5rem;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   border: 2px solid black;
   padding-bottom: 0.5rem;
@@ -56,7 +55,7 @@
   padding-right: 50px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   z-index: 2;
 }
