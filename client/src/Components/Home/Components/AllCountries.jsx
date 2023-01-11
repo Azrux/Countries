@@ -1,6 +1,5 @@
 import { useSelector } from "react-redux";
 import CountryCard from "./CountryCard";
-import Pagination from "./Pagination";
 import s from "../Styles/AllCountries.module.css";
 
 export default function AllCountries() {
@@ -14,7 +13,7 @@ export default function AllCountries() {
           countries.map((c, i) => {
             if ((currentPage === 1) & (i < 9)) {
               return (
-                <div>
+                <div key={i}>
                   <CountryCard
                     key={c.id}
                     id={c.id}
@@ -30,7 +29,7 @@ export default function AllCountries() {
               i < currentPage * 10 - 1
             ) {
               return (
-                <div>
+                <div key={i}>
                   <CountryCard
                     key={c.id}
                     id={c.id}

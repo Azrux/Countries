@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from '../../../imagenes/country-flags.png'
 import SearchBar from "./SearchBar";
-import { searchByContinent } from "../../../Redux/Actions/sortActions";
 import { useDispatch } from "react-redux";
 import s from '../Styles/NavBar.module.css'
 import { searchCountry } from "../../../Redux/Actions/countryActions";
