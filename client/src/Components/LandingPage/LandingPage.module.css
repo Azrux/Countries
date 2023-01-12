@@ -86,8 +86,7 @@
 }
 
 @media screen and (max-width: 700px) {
-  .background {
-    background-size: 150% 100%;
-    object-fit: contain;
+  .biggerSquare {
+    height: 100vh;
   }
 }
