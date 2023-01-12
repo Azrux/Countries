@@ -89,4 +89,8 @@
   .background {
     background-image: url('../../imagenes/landing\ phone.jpg');
   }
+
+  .square {
+    height: 100vh;
+  }
 }
