@@ -44,7 +44,7 @@
 .card:hover {
   box-shadow: 5px 5px 10px #565656, -5px -5px 10px #8a8a8a;
   transform: scale(1.1);
-  z-index: 2;
+  z-index: 3;
 }
 
 .link {

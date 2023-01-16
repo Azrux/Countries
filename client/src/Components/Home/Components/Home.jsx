@@ -4,7 +4,7 @@ import { getCountries } from "../../../Redux/Actions/countryActions";
 import { useDispatch } from "react-redux";
 import SortBy from "./SortBy.jsx";
 import AlltypeCards from "./AlltypeCards.jsx";
-//import s from "../Styles/Home.module.css";
+import s from "../Styles/Home.module.css";
 import Pagination from "./Pagination.jsx";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
   }, [dispatch]);
 
   return (
-    <div>
+    <div className={s.container}>
       <NavBar />
       <SortBy />
       <AlltypeCards />
